@@ -1,0 +1,39 @@
+{% extends 'base.html' %} <!-- base.html 상속 선언 -->
+
+{% block contents %}
+<body>
+    <div class="container">
+        <br><br>
+        {% for blog in posts %}
+        <div class="card">
+            <h3 class="card-header">{{blog.title}}</h3>
+            <div class="card-body">
+                <p class="card-title">{{blog.pub_date}}</p>
+                <hr>
+                <p class="card-text">{{blog.summary}}...</p>
+                <a href="{%url 'detail' blog.id%}" class="btn btn-primary">...more</a>
+            </div>
+        </div>
+        <br><br>
+        {% endfor %}
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {% if posts.has_previous %}
+                <li class="page-item"><a class="page-link" href="?page=1">First</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{posts.previous_page_number}}">Previous</a></li>
+                {% endif %}
+
+                <li class="page-item"><a class="page-link" href="#">{{posts.number}}</a></li>
+                <li class="page-item"><a class="page-link" href="#">of</a></li>
+                <li class="page-item"><a class="page-link" href="#">{{posts.paginator.num_pages}}</a></li>
+
+                {% if posts.has_next %}
+                <li class="page-item"><a class="page-link" href="?page={{posts.next_page_number}}">Next</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{posts.paginator.num_pages}}">Last</a></li>
+                {% endif %}
+            </ul>
+        </nav>    
+    </div>
+
+</body>
+{% endblock %}

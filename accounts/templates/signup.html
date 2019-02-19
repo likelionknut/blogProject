@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<div class="container">
+    <br><br><br>
+    <form class="px-4 py-3" method="POST" action="{% url 'signup' %}">
+        <!-- 보안을 위해 사용하는 난수 발생기이며 csrf(사이트간 요청위조) 공격을 방어하는 수단 -->
+        {% csrf_token %} 
+        <div class="form-group">
+        <label for="exampleDropdownFormEmail1">Username</label>
+        <input name="username" type="text" class="form-control" placeholder="exampleID">
+        </div>
+        <div class="form-group">
+        <label for="exampleDropdownFormPassword1">Password</label>
+        <input name="password" type="password" class="form-control" placeholder="Password">
+        </div>
+        <div class="form-group">
+        <label for="exampleDropdownFormPassword1">Confirm Password</label>
+        <input name="confirmpass" type="password" class="form-control" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-primary" value="Sign up!">Sign up</button>
+    </form>
+</div>
+{% endblock %}
+
