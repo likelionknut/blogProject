@@ -1,122 +1,134 @@
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
     <script src='//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js'></script>
-    <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 31,cityid: '1835848',appid: 'f74e57b358712ff9b0bae5f6d02ec271',units: 'metric',containerid: 'openweathermap-widget-31',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script>    
-    
-    {% ifequal weather 'Mist'%} <!-- url이 해당파일의 경로가 아닌 주소표시줄의 경로 -->
+    <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 31, cityid: '1835848', appid: 'f74e57b358712ff9b0bae5f6d02ec271', units: 'metric', containerid: 'openweathermap-widget-31', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();</script>
+
+    {% ifequal weather 'Mist'%}
+    <!-- url이 해당파일의 경로가 아닌 주소표시줄의 경로 -->
     <style>
-        body{
-            background-image:url('../../../static/haze.gif');
-            background-repeat:no-repeat;
-            background-size:cover;
-        }            
+        body {
+            background-image: url('../../../static/haze.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
     {% endifequal %}
 
-    {% ifequal weather 'Haze'%} <!-- url이 해당파일의 경로가 아닌 주소표시줄의 경로 -->
+    {% ifequal weather 'Haze'%}
+    <!-- url이 해당파일의 경로가 아닌 주소표시줄의 경로 -->
     <style>
-        body{
-            background-image:url('../../../static/haze2.gif');
-            background-repeat:no-repeat;
-            background-size:cover;
-        }            
+        body {
+            background-image: url('../../../static/haze2.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
     {% endifequal %}
 
     {% ifequal weather 'Clear day'%}
     <style>
-        body{
+        body {
 
-            background-image:url('../../../static/clear_sky.gif');
-            background-repeat:no-repeat;
-            background-size:cover;
-        }            
+            background-image: url('../../../static/clear_sky.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
     {% endifequal %}
 
     {% ifequal weather 'Rain'%}
     <style>
-        body{
-            background-image:url('../../../static/Rain.gif');
-            background-repeat:no-repeat;
-            background-size:cover;
-        }            
+        body {
+            background-image: url('../../../static/Rain.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
     {% endifequal %}
 
     {% ifequal weather 'Snow'%}
     <style>
-        body{
-            background-image:url('../../../static/snow.gif');
-            background-repeat:no-repeat;
-            background-size:cover;
-        }            
+        body {
+            background-image: url('../../../static/snow.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
     {% endifequal %}
 
     {% ifequal weather 'Thunder'%}
     <style>
-        body{
-            background-image:url('../../../static/thunder.gif');
-            background-repeat:no-repeat;
-            background-size:cover;
-        }            
+        body {
+            background-image: url('../../../static/thunder.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
     {% endifequal %}
 
     {% ifequal weather 'Cloud'%}
     <style>
-        body{
-            background-image:url('../../../static/clouds.gif');
-            background-repeat:no-repeat;
-            background-size:cover;
-        }            
+        body {
+            background-image: url('../../../static/clouds.gif');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
     {% endifequal %}
-    
+
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="{% url 'home' %}">Likelion blog_project</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{% url 'newblog' %}">글쓰기</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Menu
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{% url 'portfolio' %}">Portfolio</a>
-            <a class="dropdown-item" href="{% url 'signup' %}">Sign up</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="{% url 'login' %}">Login</a>
-            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-            </div>
-        </li>
-        </ul>
-    </div>
+        <a class="navbar-brand" href="{% url 'home' %}">Likelion blog_project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'newblog' %}">글쓰기</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'portfolio' %}">Portfolio</a>
+                        <a class="dropdown-item" href="{% url 'signup' %}">Sign up</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+                        <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </nav>
     <br><br>
     <div class="container">
-        <div class="row justify-content-md-center" id="openweathermap-widget-31" style="margin:0 auto; opacity: 0.5;"></div>
+        <div class="row justify-content-md-center" id="openweathermap-widget-31" style="margin:0 auto; opacity: 0.5;">
+        </div>
     </div>
 
     {% block contents %}
     <!-- 여기에 각자 다른 컨텐츠가 올 예정임. -->
     <!-- title이면 block title, sidebar면 block sidebar,..-->
     {% endblock %}
-    
+
 </body>
