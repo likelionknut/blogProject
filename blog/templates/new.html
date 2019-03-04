@@ -6,7 +6,7 @@
 <div class="container">
     <form method="POST">
         {% csrf_token %}
-        <table>
+        <table class="table table-hover table-dark">
             <!-- views.py의 blogpost 함수에서 form 인자를 전달받아 form.py의 BlogPost 클래스에 담긴 입력양식을 불러온다.-->
             <!-- 때문에 그냥 new.html을 호출한다면, 아무것도 없는 빈페이지가 출력된다.-->
             <!-- form.as_table의 form을 전달을 못받았기 때문임.-->

@@ -5,7 +5,11 @@ from .models import Blog
 class BlogPost(forms.ModelForm):
     class Meta:
         model = Blog
-        fields = ['title', 'body'] 
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+        }
+        fields = ['title', 'body']
 
 # class BlogPost(forms.Form):
 #     email = forms.EmialField()
