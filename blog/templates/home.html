@@ -22,7 +22,9 @@
         <div class="card">
             <h3 class="card-header">No post</h3>
             <div class="card-body">
-                <p class="card-title">아직 포스트가 없습니다. 글쓰기 버튼을 눌러주세요!</p>
+                <p class="card-title">아직 포스트가 없습니다.
+                    <button class="navbar-toggler"><a class="nav-link" href="{% url 'newblog' %}">글쓰기</a></button>
+                </p>
             </div>
         </div>
         <br><br>
