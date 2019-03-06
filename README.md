@@ -23,7 +23,7 @@
 	- Bootstrap Theme (https://mdbootstrap.com/)
 	- Plain HTML/CSS/js
 	- OpenWearherMap API
-	- heroku
+	- Heroku
 
 
 #### 스크린샷
