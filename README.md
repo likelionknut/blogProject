@@ -14,6 +14,7 @@
 	- 포트폴리오 게시 및 조회 기능
 	- 부트스트랩을 이용한 디자인 수정
 	- OpenWeatherMap API를 사용해 날씨 정보 제공
+	- heroku 배포 완료 (https://mutsa-team-project-blog.herokuapp.com/)
 
 
 ### 기술스택
@@ -21,6 +22,8 @@
 	- Python
 	- Bootstrap Theme (https://mdbootstrap.com/)
 	- Plain HTML/CSS/js
+	- OpenWearherMap API
+	- heroku
 
 
 #### 스크린샷
